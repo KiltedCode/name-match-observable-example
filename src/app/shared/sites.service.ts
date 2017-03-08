@@ -11,6 +11,14 @@ export class SitesService {
     private mockApi: MockApi
   ) { }
 
+  /**
+   * checkSiteName: function to call API and check if a sitename is available.
+   * uses mockApi, but would be replaced with http.
+   * maps expected server responses of 200 OK and 409.
+   * other errors map to ERROR.
+   * @param siteName: string - the value to be checked
+   * @returns Observable<string> status value of if available.
+   */
   checkSiteName(siteName: string): Observable<string> {
     return this.mockApi.siteValid(siteName)
               .map((r: any) => 'YES')

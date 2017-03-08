@@ -1,0 +1,9 @@
+<div class="sitename-component">
+  <input [(ngModel)]="siteName" id="site-name" type="text" name="site-name" placeholder="Site Name" required (keyup)="checkSiteAvailability(siteName)" class="site-name-input" />
+  <span class="site-name-check">.getit.not 
+    <span *ngIf="(nameAvailable | async) == 'YES'" class="available" title="Available">&#10003;</span>
+    <span *ngIf="(nameAvailable | async) == 'NO'" class="not-available" title="Not Available">X</span>
+    <span *ngIf="(nameAvailable | async) == 'ERROR'" class="error" title="Error checking site name">!</span>
+    <span *ngIf="(nameAvailable | async) == 'LOADING'" class="loading" title="Loading">&#167;</span>
+  </span>
+</div>

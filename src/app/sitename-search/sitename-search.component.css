@@ -1,0 +1,26 @@
+.sitename-component {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    margin: 50vh auto;
+    width: 500px;
+}
+
+input {
+    font-size: 1.5rem;
+}
+
+.available {
+    color: green;
+}
+
+.not-available {
+    color: darkred;
+}
+
+.error {
+    color: darkorange;
+}
+
+.loading {
+    color: darkblue;
+}
